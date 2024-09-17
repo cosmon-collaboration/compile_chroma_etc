@@ -70,6 +70,7 @@ LALIBE_BRANCH="--branch qedm"
 # USE $EXT in build scripts
 
 # LD_LIBRARY_PATH
+# on Summit, CUDAPATH is defined by module
 CUDA_HOME=$CUDAPATH
 export LD_LIBRARY_PATH=${INSTALLROOT}/${QMP}_${EXT}/lib:${LD_LIBRARY_PATH}
 export LD_LIBRARY_PATH=${INSTALLROOT}/${HDF5}_${EXT}/lib:${LD_LIBRARY_PATH}

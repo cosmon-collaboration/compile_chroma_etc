@@ -66,7 +66,8 @@ LALIBE_BRANCH="--branch qedm"
 # USE $EXT in build scripts
 
 # LD_LIBRARY_PATH
-export LD_LIBRARY_PATH=${CUDA_HOME}/lib64:${LD_LIBRARY_PATH}
+# on lassen CUDA_HOME is defined in the module
+CUDA_HOME=$CUDA_HOME
 export LD_LIBRARY_PATH=${INSTALLROOT}/${QMP}_${EXT}/lib:${LD_LIBRARY_PATH}
 export LD_LIBRARY_PATH=${INSTALLROOT}/${HDF5}_${EXT}/lib:${LD_LIBRARY_PATH}
 export LD_LIBRARY_PATH=${INSTALLROOT}/${QDP}_${EXT}/lib:${LD_LIBRARY_PATH}
