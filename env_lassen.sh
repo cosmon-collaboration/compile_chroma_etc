@@ -76,3 +76,9 @@ if [ "$EXT" = "GPU" ]; then
 fi
 export LD_LIBRARY_PATH=${INSTALLROOT}/${CHROMA}_${EXT}/lib:${LD_LIBRARY_PATH}
 
+# EXECUTABLES
+if [ "$EXT" = "GPU" ]; then
+    export LALIBE_GPU=${INSTALLROOT}/${LALIBE}_${EXT}/bin/lalibe
+else
+    export LALIBE_CPU=${INSTALLROOT}/${LALIBE}_${EXT}/bin/lalibe
+fi

@@ -1,5 +1,10 @@
 #!/usr/bin/bash
 
+if [ ! -e env.sh ]; then
+    echo "you need to copy your env_machine.sh to env.sh"
+    exit
+fi
+
 source ./env.sh $1
 
 PKG=$QMP
